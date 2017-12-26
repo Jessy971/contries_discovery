@@ -1,0 +1,90 @@
+/**
+*Générale
+**/
+
+body{
+  margin: 0;
+  padding: 0;
+}
+header{
+  position: sticky;
+  top: 0px;
+  z-index: 10;
+}
+.noPadding{
+  padding: 0;
+}
+#contenu{
+  position: relative;
+}
+
+/**
+*drapeau + info
+**/
+
+#flagFrame{
+  /*border: solid;*/
+  position: relative;
+  background: red;
+  height: 500px;
+}
+#flag{
+  height: 100%;
+  padding: 0;
+}
+#info{
+  position: absolute;
+  background: yellow;
+  height: 150px;
+  bottom: 15px;
+}
+
+/**
+*Description
+**/
+
+#img{
+  position: absolute;
+  top: 270px;
+  height: 476px;
+  border-radius: 261px;
+  background: green;
+}
+article{
+  /*border: solid;*/
+
+  margin-top: 30px;
+
+  height: 215px;
+  background: blue;
+}
+/**
+*Map
+**/
+
+#map{
+  background: grey;
+  margin-top: 30px;
+  height: 500px;
+}
+/**
+*Commentaire
+**/
+#commentaires{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.listeCommentaire{
+  background: purple;
+  height: 300px;
+}
+textarea{
+  height: 118px;
+}
+/**
+*footer
+**/
+footer{
+  background: orange;
+  height: 300px;
+}
