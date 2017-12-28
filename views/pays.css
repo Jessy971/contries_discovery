@@ -25,7 +25,7 @@ header{
 #flagFrame{
   /*border: solid;*/
   position: relative;
-  background: red;
+  /*background: red;*/
   height: 500px;
 }
 #flag{
@@ -34,8 +34,7 @@ header{
 }
 #info{
   position: absolute;
-  background: yellow;
-  height: 150px;
+  font-size: 3em;
   bottom: 15px;
 }
 
@@ -45,18 +44,21 @@ header{
 
 #img{
   position: absolute;
-  top: 270px;
-  height: 476px;
+  top: 417px;
+  height: 372px;
   border-radius: 261px;
-  background: green;
+  /*background: green;*/
+  padding: 0;
 }
 article{
   /*border: solid;*/
-
   margin-top: 30px;
-
-  height: 215px;
-  background: blue;
+  min-height: 270px;
+  /*background: blue;*/
+  overflow: auto;
+}
+.categories{
+  list-style-type: none;
 }
 /**
 *Map

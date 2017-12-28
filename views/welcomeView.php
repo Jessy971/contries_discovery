@@ -9,7 +9,6 @@
           <img class="" src=" <?php echo $array[$i]['drapeau'];?>" alt="">
           <div class="container filtre">
             <div class="row">
-              <a href="pays/<?php echo $array[$i]['nom'].'/'; echo $array[$i]['alpha2Code'];?>">
               <h3 class=" nomPays col-lg-8 offset-lg-2"> Pays : <?php echo $array[$i]['nom'];?> </h3>
               <ul>
                 <li>
@@ -30,7 +29,7 @@
                   <h4>Monnaie utilisé : <?php echo $array[$i]['monnaie']; ?></h4>
                 </li>
               </ul>
-              </a>
+              <a href="pays/<?php echo $array[$i]['nom'].'/'; echo $array[$i]['alpha2Code'];?>"><button>Découvrir</button></a>
           </div>
           </div>
         </div>
