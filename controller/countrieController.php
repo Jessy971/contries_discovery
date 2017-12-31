@@ -1,22 +1,23 @@
 <?php
+require("librairy/BdConnection.class.php");
+require("model/ManagerCommentaire.class.php");
 
-    $name = htmlspecialchars($url[2]);
-    $curl = curl_init();
-    $opts = [
+$name = htmlentities($url[2]);
+$curl = curl_init();
+$opts = [
+          CURLOPT_URL => 'https://restcountries.eu/rest/v2/alpha/'.$name,
+          CURLOPT_RETURNTRANSFER => true,
+        ];
 
-        CURLOPT_URL => 'https://restcountries.eu/rest/v2/alpha/'.$name,
-        CURLOPT_RETURNTRANSFER => true,
-      ];
+curl_setopt_array($curl, $opts);
 
-    curl_setopt_array($curl, $opts);
+$response = curl_exec($curl);
 
-    $response = curl_exec($curl);
+curl_close($curl);
 
-    curl_close($curl);
+$query = json_decode($response, true);
 
-    $query = json_decode($response, true);
-
-      $p = [
+$p = [
         'name'      => $query['name'],
         'nom'       => $query['translations']['fr'],
         'continent' => $query['subregion'],
@@ -27,31 +28,26 @@
         'latlng'    => $query['latlng']
         ];
 
-$flag = $p['drapeau'];
-$pays = $p['name'];
-$css  = '../../views/pays.css';
-if(isset($p['latlng'][0],$p['latlng'][1])){
+$flag              = $p['drapeau'];
+$pays              = $p['name'];
+$css               = '../../views/pays.css';
+$_SESSION['pays']  = $pays;
+$_SESSION['alpha'] = $name;
+$commentaires      = new ManagerCommentaires();
+$commentaires      = $commentaires->readAllComments($pays);
+
+
+if(isset($p['latlng'][0],$p['latlng'][1]))
+{
   $lat  = $p['latlng'][0];
   $lng  = $p['latlng'][1];
 }
-else {
+
+else
+{
   $lat  = "N.C";
   $lng  = "N.C";
 }
+
 include('photoController.php');
 include('views/paysView.php');
-
-echo "<hr>";
-echo "<pre>";
-print_r($querLeng);
-echo "</pre>";
-
-echo "<hr>";
-echo "<pre>";
-print_r($p);
-echo "</pre>";
-
-/*echo "<hr>";
-echo "<pre>";
-print_r($p['latlng'][0]);
-echo "</pre>";*/
