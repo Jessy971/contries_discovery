@@ -1,14 +1,8 @@
 <?php
-$curl = curl_init();
-$opts = [
-          CURLOPT_URL => 'https://restcountries.eu/rest/v2/all',
-          CURLOPT_RETURNTRANSFER => true,
-        ];
+require("curl.function.php");
 
-curl_setopt_array($curl, $opts);
-
-$response = curl_exec($curl);
-curl_close($curl);
+$q        = 'https://restcountries.eu/rest/v2/all';
+$response = curl($q);
 $all = json_decode($response, true);
 foreach ($all as $pays) {
 
@@ -21,7 +15,7 @@ foreach ($all as $pays) {
           'monnaie'     => $pays['currencies'][0]['name'],
           'latlng'      => $pays['latlng']
         ];
-        
+
     $array[] = $p;
   }
 

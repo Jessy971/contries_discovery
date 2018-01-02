@@ -1,21 +1,12 @@
 <?php
 require("librairy/BdConnection.class.php");
 require("model/ManagerCommentaire.class.php");
+require("curl.function.php");
 
-$name = htmlentities($url[2]);
-$curl = curl_init();
-$opts = [
-          CURLOPT_URL => 'https://restcountries.eu/rest/v2/alpha/'.$name,
-          CURLOPT_RETURNTRANSFER => true,
-        ];
-
-curl_setopt_array($curl, $opts);
-
-$response = curl_exec($curl);
-
-curl_close($curl);
-
-$query = json_decode($response, true);
+$name     = htmlentities($url[2]);
+$q        = 'https://restcountries.eu/rest/v2/alpha/'.$name;
+$response = curl($q);
+$query    = json_decode($response, true);
 
 $p = [
         'name'      => $query['name'],
