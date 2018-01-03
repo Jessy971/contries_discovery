@@ -3,7 +3,7 @@ require("curl.function.php");
 
 $q        = 'https://restcountries.eu/rest/v2/all';
 $response = curl($q);
-$all = json_decode($response, true);
+$all      = json_decode($response, true);
 foreach ($all as $pays) {
 
   $p = [
