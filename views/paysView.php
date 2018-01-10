@@ -14,48 +14,63 @@ include_once('__header.php');
     <?php } ?>
     <article id="description" class="col-lg-5 offset-lg-7">
       <ul>
-        <li class="categories"><h5>Capitale :</h5>
-          <ul>
-            <li><?php echo $p['capitale']; ?></li>
-          </ul>
-        </li>
-        <li class="categories"><h5>Langue(s) parlé(s) :</h5>
-          <?php
-          if(count($p['langues']) > 1){
-            echo "<ul>";
-            for($i = 0; $i < count($p['langues']); $i++) {
-          ?>
-            <li> <?php echo $p['langues'][$i]['name']; ?></li>
-          <?php
-            }
-            echo "</ul>";
-          }
-          else {
-            ?>
+        <li class="categories">
+          <details open>
+            <summary>Capitale :</summary>
             <ul>
-              <li><?php echo $p['langues'][0]['name'];?></li>
+              <li><?php echo $p['capitale']; ?></li>
             </ul>
+          </details>
+        </li>
+        <li class="categories">
+          <details>
+            <summary>Langue(s) parlé(s) :</summary>
+            <?php
+            if(count($p['langues']) > 1){
+              echo "<ul>";
+              for($i = 0; $i < count($p['langues']); $i++) {
+            ?>
+              <li> <?php echo $p['langues'][$i]['name']; ?></li>
+            <?php
+              }
+              echo "</ul>";
+            }
+            else {
+              ?>
+              <ul>
+                <li><?php echo $p['langues'][0]['name'];?></li>
+              </ul>
 
-          <?php
-          }
-          ?>
+            <?php
+            }
+            ?>
+          </details>
         </li>
-        <li class="categories"><h5>Monnaie officiel :</h5>
-          <ul>
-            <li><?php echo $p['monnaie']; ?></li>
-          </ul>
-        </li>
-        <li class="categories"><h5>Continent :</h5>
-          <ul>
-            <li><?php echo $p['continent']; ?></li>
-          </ul>
-        </li>
-        <li class="categories"><h5>Coodronné gps :</h5>
-          <ul>
-            <li> Latitude : <span id="lat"><?php echo $lat; ?></span></li>
-            <li> Longitude : <span id="lng"><?php echo $lng; ?></span></li>
-          </ul>
+        <li class="categories">
+          <details open>
+            <summary>Monnaie officiel :</summary>
+            <ul>
+              <li><?php echo $p['monnaie']; ?></li>
+            </ul>
+          </details>
 
+        </li>
+        <li class="categories">
+          <details open>
+            <summary>Continent :</summary>
+            <ul>
+              <li><?php echo $p['continent']; ?></li>
+            </ul>
+          </details>
+        </li>
+        <li class="categories">
+          <details>
+            <summary>Coodronné gps :</summary>
+            <ul>
+              <li> Latitude : <span id="lat"><?php echo $lat; ?></span></li>
+              <li> Longitude : <span id="lng"><?php echo $lng; ?></span></li>
+            </ul>
+          </details>
         </li>
       </ul>
     </article>

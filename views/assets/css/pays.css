@@ -56,6 +56,7 @@ header{
 article{
   /*border: solid;*/
   margin-top: 30px;
+  margin-bottom: 70px;
   min-height: 270px;
   /*background: blue;*/
   overflow: auto;
@@ -74,7 +75,7 @@ article{
 *Commentaire
 **/
 #commentaires{
-  
+
   /*background: rgb(238, 238, 238);*/
 }
 .listeCommentaire{
