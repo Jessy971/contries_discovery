@@ -9,7 +9,7 @@ include_once('__header.php');
   </div>
 
   <div class="row grey">
-    <?php if($quer != 0){?>
+    <?php if($quer != 0){?> <!--Affiche une photo aléatoirement.-->
     <img id="img" class="col-lg-4 offset-lg-2" src="<?php echo $picture;?>" alt="">
     <?php } ?>
     <article id="description" class="col-lg-5 offset-lg-7">

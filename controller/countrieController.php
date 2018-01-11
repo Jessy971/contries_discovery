@@ -57,5 +57,8 @@ $_SESSION['pays']  = $p['name'];
 $css               = '../../views/assets/css/pays.css';
 $commentaires      = $commentaires->readAllComments($_SESSION['pays']);
 
+$ajax = "../../views/assets/js/q.js";
+$map = "../../views/assets/js/map.js";
+
 include('photoController.php');
 include('views/paysView.php');

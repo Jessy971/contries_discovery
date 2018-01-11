@@ -30,11 +30,7 @@ if(!$array = json_decode($cache->getCache($file),true)){
   $cache->cachePut($file, $array);
 }
 
+$ajax = "views/assets/js/q.js";
+$map = "views/assets/js/map.js";
 $css = 'views/assets/css/stylesheet.css';
 include_once('views/welcomeView.php');
-/***************************************************************/
-//echo "<pre>";
-// echo $cache;
-// var_dump($array["Afghanistan"]);
-// print_r($array);
-// echo "</pre>";
