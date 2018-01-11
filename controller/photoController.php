@@ -1,5 +1,5 @@
 <?php
-$q         = 'https://pixabay.com/api/?key=7514279-e02a9dcde9b9d9feb83ceb697&q='.$pays.'+landscape&image_type=photo'.$name;
+$q         = 'https://pixabay.com/api/?key=7514279-e02a9dcde9b9d9feb83ceb697&q='.$pays.'+landscape&image_type=photo'.$alpha;
 $response  = curl($q);
 $quer      = json_decode($response, true);
 $querLeng  = count($quer['hits']);
@@ -12,12 +12,4 @@ if($querLeng != 0){
     $indexRand = 0;
   }
   $picture   = $quer['hits'][$indexRand]['webformatURL'];
-}
-
-
-class RequeteApi{
-
-
-
-
 }

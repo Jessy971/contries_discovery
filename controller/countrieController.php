@@ -6,18 +6,18 @@ require("class/class.Cache.php");
 
 
 $cache             = new Cache();
-$name              = htmlentities($url[2]);
+$alpha              = htmlentities($url[2]);
 $pays              = htmlspecialchars($url[1]);
 $file              = $_SESSION['file'];
 $commentaires      = new ManagerCommentaires();
-$_SESSION['alpha'] = $name;
+$_SESSION['alpha'] = $alpha;
 
 
 //vérifie si le fichier cache exite et attibut le résulta à la variable $array.
 // si false, exécute une requète à l'api REST countries.
 if(!$array = json_decode($cache->getCache($file),true)){
-  
-   $q        = 'https://restcountries.eu/rest/v2/alpha/'.$name;
+
+   $q        = 'https://restcountries.eu/rest/v2/alpha/'.$alpha;
    $response = curl($q);
    $query    = json_decode($response, true);
 

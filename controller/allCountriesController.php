@@ -12,8 +12,8 @@ if(!$array = json_decode($cache->getCache($file),true)){
   foreach ($all as $pays) {
 
     $p  = [
-            'name'        => $pays['name'],
             'nom'         => $pays['translations']['fr'],
+            'name'        => $pays['name'],
             'alpha2Code'  => $pays['alpha2Code'],
             'continent'   => $pays['subregion'],
             'capitale'    => $pays['capital'],

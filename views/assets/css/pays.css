@@ -11,6 +11,22 @@ header{
   top: 0px;
   z-index: 10;
 }
+.resulta{
+  display: none;
+  background: #ffff;
+  position: absolute;
+  top: 47px;
+  right: 24px;
+  list-style-type: none;
+}
+#searchBar ul{
+  list-style-type: none;
+}
+#searchBar ul a{
+  text-decoration: none;
+  color: grey;
+}
+#search{border-radius: 0;}
 .noPadding{
   padding: 0;
 }
