@@ -7,7 +7,7 @@
    $url = explode('/',htmlspecialchars($_GET['url']));
 }
 
- if(empty($url))
+ if(empty($url) || $url[0] == 'accueil')
 {
   include('controller/allCountriesController.php');
 

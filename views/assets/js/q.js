@@ -1,13 +1,12 @@
 $(function(){
-
+  var url = 'livesearch/';
+  if($('#info').text() != ""){
+    url = '../../livesearch/pays/';
+    $('#accueil').show();
+  }
   $("#search").keyup(function(e){
 
     var search = $("#search").val();
-    var url = 'livesearch/';
-    if($('#info').text() != ""){
-      url = '../../livesearch/pays/';
-    }
-
 
     if(search != ""){
       $(".resulta").show();
