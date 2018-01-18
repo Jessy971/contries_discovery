@@ -4,7 +4,7 @@ include_once('__header.php');
  ?>
 <section id="contenu" class="container noPadding">
   <div id="flagFrame" class="row grey">
-    <img id="flag" class="col-lg-12"src="<?php echo $flag?>" alt="drapeau <?php echo $p['nom'];?>">
+    <img id="flag" class="col-lg-12" src="<?php echo $flag;?>" alt="drapeau <?php echo $p['nom'];?>">
     <h1 id="info" class="offset-lg-7"> <?php echo $p['nom'];?></h1>
   </div>
 
@@ -12,7 +12,7 @@ include_once('__header.php');
     <?php if($quer != 0){?> <!--Affiche une photo aléatoirement.-->
     <img id="img" class="col-lg-4 offset-lg-2" src="<?php echo $picture;?>" alt="">
     <?php } ?>
-    <article id="description" class="col-lg-5 offset-lg-7">
+    <div id="description" class="col-lg-5 offset-lg-7">
       <ul>
         <li class="categories">
           <details open>
@@ -73,7 +73,7 @@ include_once('__header.php');
           </details>
         </li>
       </ul>
-    </article>
+    </div>
   </div>
   <div class="row">
     <aside id="map" class="col-sm-12"></aside>
@@ -83,7 +83,7 @@ include_once('__header.php');
       <h2 class="m-auto">Laissez votre avis</h2>
     </div>
     <?php include("__formCom.php"); ?>
-    <section class="listeCommentaire col-lg-5 offset-lg-1">
+    <div class="listeCommentaire col-lg-5 offset-lg-1">
       <!--Affiche les commentaires lié.-->
       <?php if(count($commentaires) != 0){
             while ($c = $commentaires->fetch()) {?>
@@ -97,7 +97,7 @@ include_once('__header.php');
               </article>
               <hr>
         <?php }} ?>
-    </section>
+    </div>
   </div>
 </section>
 <?php include_once('__footer.php');?>

@@ -1,13 +1,15 @@
 <form  method="POST" action="../../commentaire" class="col-lg-4 offset-lg-1">
   <div class="form-group">
-    <for="pseudo">Pseudo</label>
-    <input type="text" name="pseudo" placeholder="ex : @leFantôme" class="form-control">
+    <label>Pseudo
+      <input type="text" name="pseudo" placeholder="ex : @leFantôme" class="form-control">
+    </label>
   </div>
   <div class="form-group">
-    <label for="text">Ecrivez votre commentaire</label>
-    <textarea name="text" class="form-control"></textarea>
+    <label>Ecrivez votre commentaire
+      <textarea name="text" class="form-control"></textarea>
+    </label>
   </div>
   <div class="form-group">
-    <input type="submit" class="btn btn-primary" name="" value="Envoyer">
+    <input type="submit" class="btn btn-primary" value="Envoyer">
   </div>
 </form>
