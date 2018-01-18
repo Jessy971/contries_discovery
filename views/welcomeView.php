@@ -3,10 +3,10 @@
  include_once('__header.php');
  ?>
 <section id="contenu" class="container">
-  <div class="row">
-    <div class="col-sm-12 pays">
+  <div class="">
+    <div class="pays">
       <?php foreach ($array as $pays) { ?>
-          <div class="col-12 drapeau">
+          <div class="drapeau">
             <img class="" src=" <?php echo $pays['drapeau'];?>" alt="">
             <div class="container filtre">
               <div class="row">

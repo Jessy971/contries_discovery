@@ -48,7 +48,7 @@ include_once('__header.php');
         </li>
         <li class="categories">
           <details open>
-            <summary>Monnaie officiel :</summary>
+            <summary>Monnaie officielle :</summary>
             <ul>
               <li><?php echo $p['monnaie']; ?></li>
             </ul>

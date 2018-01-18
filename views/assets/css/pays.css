@@ -118,6 +118,10 @@ footer{
   #brand{
     font-size: 5em;
   }
+  nav{
+    display: flex;
+    flex-direction: column ;
+  }
   .resulta{font-size: 2.5em;}
   #search{
     width: 100%;
@@ -125,71 +129,16 @@ footer{
     font-size: 2em;
   }
   #accueil{
-    color: white;
-    text-decoration: none;
     font-size: 4em;
   }
   #img{
     display: none;
-    height: 250px;
-    padding: 0;
   }
   #info{
     position: absolute;
     font-size: 3em;
     bottom: 15px;
-
   }
-
-  /**
-  *Description
-  **/
-
-  #img{
-    height: 372px;
-    padding: 0;
-  }
-  article{
-    /*border: solid;*/
-    margin-top: 30px;
-    margin-bottom: 70px;
-    min-height: 270px;
-    /*background: blue;*/
-    overflow: auto;
-  }
-  .categories{
-    list-style-type: none;
-  }
-  /**
-  *Map
-  **/
-
-  #map{
-    height: 500px;
-  }
-  /**
-  *Commentaire
-  **/
-  #commentaires{
-
-    /*background: rgb(238, 238, 238);*/
-  }
-  .listeCommentaire{
-    background: rgba(255,255,255,0.8);
-    min-height: 300px;
-  }
-  textarea{
-    height: 118px;
-  }
-  /**
-  *footer
-  **/
-  footer{
-    background: orange;
-    height: 300px;
-  }
-
-}
   .inpt{
     width: 100%;
   }
