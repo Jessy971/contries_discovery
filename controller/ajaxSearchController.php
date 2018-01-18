@@ -17,23 +17,23 @@ $len = strlen($q); // utilisé dans la methode substr() pour avoir un résulta p
 
              if($url[1] === "pays" ){
               if ($result === "") {
-                  $result = "<li><a class = 'lienPays' href='../../pays/" . $name['nom'] ."/" . $name['alpha2Code'].  "'>" . $name['nom'] . "</a></li>";
+                  $result = "<li><a class = 'lienPays' href='../../pays/" . urlencode($name['nom']) ."/" . urlencode($name['alpha2Code']).  "'>" . $name['nom'] . "</a></li>";
               } else {
-                  $result .= "<li><a class = 'lienPays' href='../../pays/" . $name['nom'] ."/" . $name['alpha2Code'].  "'>" . $name['nom'] . "</a></li>";
+                  $result .= "<li><a class = 'lienPays' href='../../pays/" . urlencode($name['nom']) ."/" . urlencode($name['alpha2Code']).  "'>" . $name['nom'] . "</a></li>";
               }
             }
             else {
               if ($result === "") {
-                  $result = "<li><a class = 'lienPays' href='pays/" . $name['nom'] ."/" . $name['alpha2Code'].  "'>" . $name['nom'] . "</a></li>";
+                  $result = "<li><a class = 'lienPays' href='pays/" . urlencode($name['nom'])."/" . urlencode($name['alpha2Code']). "'>" . $name['nom'] . "</a></li>";
               } else {
-                  $result .= "<li><a class = 'lienPays' href='pays/" . $name['nom'] ."/" . $name['alpha2Code'].  "'>" . $name['nom'] . "</a></li>";
+                  $result .= "<li><a class = 'lienPays' href='pays/" . urlencode($name['nom'])."/" . urlencode($name['alpha2Code']). "'>" . $name['nom'] . "</a></li>";
               }
             }
-
           }
         }
      }
 
 //affiche le résulta qui match ou une phrase que rien ne match.
 
-echo $result === "" ? "no suggestion" : "<ul>". $result. "</ul>";
+echo $result === "" ? "Pas de correspondance": "<ul>". $result. "</ul>";
+;

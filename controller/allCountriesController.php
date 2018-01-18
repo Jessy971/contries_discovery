@@ -2,8 +2,10 @@
 require("function/curl.function.php");
 require("class/class.Cache.php");
 $cache     = new Cache();
+$dirname = dirname(__FILE__,2);
 $_SESSION['file'] = $file = "liste_pays";
-if(!$array = json_decode($cache->getCache($file),true)){
+
+if(!$array = json_decode($cache->getCache($dirname."/cache/".$file),true)){
 
   $q         = 'https://restcountries.eu/rest/v2/all';
   $response  = curl($q);
@@ -27,7 +29,7 @@ if(!$array = json_decode($cache->getCache($file),true)){
 
     }
 
-  $cache->cachePut($file, $array);
+  $cache->cachePut($dirname."/cache/".$file, $array);
 }
 
 $ajax = "views/assets/js/q.js";
