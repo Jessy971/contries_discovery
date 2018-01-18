@@ -10,9 +10,9 @@ include_once('__header.php');
 
   <div class="row grey">
     <?php if($quer != 0){?> <!--Affiche une photo aléatoirement.-->
-    <img id="img" class="col-lg-4 offset-lg-2" src="<?php echo $picture;?>" alt="">
+    <img id="img" class="col-10 col-lg-4 offset-1 offset-lg-2" src="<?php echo $picture;?>" alt="">
     <?php } ?>
-    <div id="description" class="col-lg-5 offset-lg-7">
+    <div id="description" class="col-10 col-lg-5 offset-3 offset-lg-7">
       <ul>
         <li class="categories">
           <details open>
