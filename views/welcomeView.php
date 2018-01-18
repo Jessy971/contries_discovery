@@ -10,7 +10,7 @@
           <div class="container filtre">
             <div class="row">
               <h3 class=" nomPays col-lg-8 offset-lg-2"> Pays : <?php echo $pays['nom'];?> </h3>
-              <a href="pays/<?php echo $pays['nom'].'/'; echo $pays['alpha2Code'];?>"><button>Découvrir</button></a>
+              <a href="pays/<?php echo $pays['nom'].'/'; echo $pays['alpha2Code'];?>">Découvrir</a>
           </div>
           </div>
         </div>
