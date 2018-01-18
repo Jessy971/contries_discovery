@@ -65,7 +65,7 @@ include_once('__header.php');
         </li>
         <li class="categories">
           <details>
-            <summary>Coodronné gps :</summary>
+            <summary>Coodronnées gps :</summary>
             <ul>
               <li> Latitude : <span id="lat"><?php echo $lat; ?></span></li>
               <li> Longitude : <span id="lng"><?php echo $lng; ?></span></li>
