@@ -11,6 +11,10 @@ header{
   top: 0px;
   z-index: 10;
 }
+#accueil{
+  color: white;
+  text-decoration: none;
+}
 .resulta{
   display: none;
   background: #ffff;
