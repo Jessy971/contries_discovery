@@ -19,8 +19,8 @@ header{
   display: none;
   background: #ffff;
   position: absolute;
-  top: 47px;
-  right: 24px;
+  /* top: 47px;
+  right: 24px; */
   list-style-type: none;
   z-index: 1000;
 }
@@ -69,7 +69,7 @@ header{
 #img{
   position: absolute;
   top: 417px;
-  height: 372px;
+  height: 394px;
   border-radius: 261px;
   /*background: green;*/
   padding: 0;
@@ -113,14 +113,17 @@ footer{
   background: orange;
   height: 300px;
 }
+.minHeight{
+  min-height: 340px;
+}
 
 @media all and (max-width: 992px) {
   #brand{
     font-size: 5em;
   }
   nav{
-    display: flex;
-    flex-direction: column ;
+    /* display: flex;
+    flex-direction: column ; */
   }
   .resulta{font-size: 2.5em;}
   #search{
@@ -130,9 +133,12 @@ footer{
   }
   #accueil{
     font-size: 4em;
+    margin-bottom: 3%;
   }
   #img{
-    display: none;
+    position: inherit;
+    border-radius: 0;
+    height: auto;
   }
   #info{
     position: absolute;

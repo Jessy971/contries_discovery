@@ -25,7 +25,7 @@ if(!$array = json_decode($cache->getCache($dirname."/cache/".$file),true)){
             'latlng'      => $pays['latlng']
           ];
 
-      $array[$pays['translations']['fr']] = $p;
+      $array[strtolower ($pays['name'])] = $p;
 
     }
 

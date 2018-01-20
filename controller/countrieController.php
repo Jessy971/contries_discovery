@@ -6,18 +6,18 @@ require("class/class.Cache.php");
 
 
 $cache             = new Cache();
-$alpha              = htmlentities($url[2]);
+//$alpha              = htmlentities($url[2]);
 $pays              = htmlspecialchars($url[1]);
-$file              = $_SESSION['file'];
+$file              = dirname(__FILE__,2).'/cache/'.$_SESSION['file'];
 $commentaires      = new ManagerCommentaires();
-$_SESSION['alpha'] = $alpha;
+//$_SESSION['alpha'] = $alpha;
 
 
 //vérifie si le fichier cache exite et attibut le résulta à la variable $array.
 // si false, exécute une requète à l'api REST countries.
 if(!$array = json_decode($cache->getCache($file),true)){
 
-   $q        = 'https://restcountries.eu/rest/v2/alpha/'.$alpha;
+   $q        = 'https://restcountries.eu/rest/v2/name/'.$pays;
    $response = curl($q);
    $query    = json_decode($response, true);
 
@@ -49,16 +49,19 @@ else
 }
 $flag = $p['drapeau'];
 
-// echo "<pre>";
-// print_r($p);
-// echo "</pre>";
+
 
 $_SESSION['pays']  = $p['name'];
-$css               = '../../views/assets/css/pays.css';
+$css               = '../views/assets/css/pays.css';
 $commentaires      = $commentaires->readAllComments($_SESSION['pays']);
 
-$ajax = "../../views/assets/js/q.js";
-$map = "../../views/assets/js/map.js";
+$ajax = "../views/assets/js/q.js";
+$map = "../views/assets/js/map.js";
 
 include('photoController.php');
 include('views/paysView.php');
+// echo $pays;
+// echo $file;
+// echo "<pre>";
+// print_r($p);
+// echo "</pre>";

@@ -1,15 +1,15 @@
-<form  method="POST" action="../../commentaire" class="col-lg-4 offset-lg-1">
-  <div class="form-group">
-    <label class="lb col-9 offset-2">Pseudo
-      <input class="inpt spe" type="text" name="pseudo" placeholder="ex : @leFantôme" class="form-control">
+<form  method="POST" action="../../commentaire" class="col-lg-5 offset-lg-1">
+  <div class="form-group col-12 col-lg-12">
+    <label class="lb col-12 col-lg-12">Pseudo
+      <input class="inpt spe col-lg-10" type="text" name="pseudo" placeholder="ex : @leFantôme" class="form-control">
     </label>
   </div>
-  <div class="form-group">
-    <label class="lb col-9 offset-2">Ecrivez votre commentaire
-      <textarea class="inpt txt" name="text" class="form-control"></textarea>
+  <div class="form-group col-12 col-lg-12">
+    <label class="lb col-12 col-lg-12">Ecrivez votre commentaire
+      <textarea class="inpt txt col-lg-10" name="text" class="form-control"></textarea>
     </label>
   </div>
-  <div class="form-group">
-    <input type="submit" class="btn btn-primary offset-4" value="Envoyer">
+  <div class="form-group ">
+    <input type="submit" class="btn btn-primary offset-4 offset-lg-3" value="Envoyer">
   </div>
 </form>

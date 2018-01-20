@@ -8,9 +8,9 @@ include_once('__header.php');
     <h1 id="info" class="offset-lg-7"> <?php echo $p['nom'];?></h1>
   </div>
 
-  <div class="row grey">
+  <div class="row grey minHeight">
     <?php if($quer != 0){?> <!--Affiche une photo aléatoirement.-->
-    <img id="img" class="col-10 col-lg-4 offset-1 offset-lg-2" src="<?php echo $picture;?>" alt="">
+    <img id="img" class="col-12 col-lg-5 offset-lg-1 col-xl-4" src="<?php echo $picture;?>" alt="">
     <?php } ?>
     <div id="description" class="col-10 col-lg-5 offset-3 offset-lg-7">
       <ul>
@@ -76,10 +76,10 @@ include_once('__header.php');
     </div>
   </div>
   <div class="row">
-    <aside id="map" class="col-sm-12"></aside>
+    <aside id="map" class="col-12"></aside>
   </div>
   <div id="commentaires" class="row d-flex grey p-5">
-    <div class="row col-lg-12 pb-5">
+    <div class="row col-8 offset-2 pb-5">
       <h2 class="m-auto">Laissez votre avis</h2>
     </div>
     <?php include("__formCom.php"); ?>

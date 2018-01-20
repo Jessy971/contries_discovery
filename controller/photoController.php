@@ -1,5 +1,5 @@
 <?php
-$q         = 'https://pixabay.com/api/?key=7514279-e02a9dcde9b9d9feb83ceb697&q='.$pays.'+landscape&image_type=photo'.$alpha;
+$q         = 'https://pixabay.com/api/?key=7514279-e02a9dcde9b9d9feb83ceb697&q='.$pays.'+landscape&image_type=photo';
 $response  = curl($q);
 $quer      = json_decode($response, true);
 $querLeng  = count($quer['hits']);

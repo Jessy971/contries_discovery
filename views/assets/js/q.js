@@ -1,7 +1,7 @@
 $(function(){
   var url = 'livesearch/';
   if($('#info').text() != ""){
-    url = '../../livesearch/pays/';
+    url = '../livesearch/pays/';
     $('#accueil').show();
   }
   $("#search").keyup(function(e){

@@ -11,7 +11,7 @@
             <div class="container filtre">
               <div class="row">
                 <h3 class=" nomPays col-lg-8 offset-lg-2"> Pays : <?php echo $pays['nom'];?> </h3>
-                <a class="decouvrir col-6 col-lg-4 offset-4 offset-lg-55" href="pays/<?php echo urlencode($pays['nom']).'/'; echo urlencode($pays['alpha2Code']);?>">Découvrir</a>
+                <a class="decouvrir col-6 col-lg-4 offset-4 offset-lg-55" href="pays/<?php echo rawurlencode (strtolower ($pays['name']))/*.'/'. rawurlencode($pays['alpha2Code'])*/;?>">Découvrir</a>
             </div>
             </div>
           </div>
