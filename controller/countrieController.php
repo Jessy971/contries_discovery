@@ -20,18 +20,20 @@ if(!$array = json_decode($cache->getCache($file))){
    $query    = json_decode($response);
 
   $country = new Pays(
-          $query->name,
-          $query->translations->fr,
-          $query->subregion,
-          $query->capital,
-          $query->languages,
-          $query->flag,
-          $query->currencies[0]->name,
-          $query->latlng[0],
-          $query->latlng[1]
+          $query[0]->name,
+          $query[0]->translations->fr,
+          $query[0]->subregion,
+          $query[0]->capital,
+          $query[0]->languages,
+          $query[0]->flag,
+          $query[0]->currencies[0]->name,
+          $query[0]->latlng[0],
+          $query[0]->latlng[1]
         );
 }
-$country = unserialize($array->$pays);
+else {
+  $country = unserialize($array->$pays);
+}
 
 // initialise les coordonées GSP si existante.
 

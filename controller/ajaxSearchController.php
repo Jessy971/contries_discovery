@@ -15,22 +15,25 @@ if ($url[1] === "pays" ){$q = $url[2];}
   foreach ($array as $name) {
 
         if($len > 0){
-          $country = unserialize($name)->getNameFr();
+          $nameEn = unserialize($name)->getNameEn();
+          $nameFr = unserialize($name)->getNameFr();
 
-          if (stristr(substr($country, 0, $len), $q)) {
+          if (stristr(substr($nameFr, 0, $len), $q)) {
 
              if($url[1] === "pays" ){
               if ($result === "") {
-                  $result = '<li><a class = "lienPays" href="../pays/'. urlencode(strtolower($country)) . '">' . $country . '</a></li>';
-              } else {
-                  $result .= '<li><a class = "lienPays" href="../pays/'. urlencode(strtolower($country)) . '">' . $country . '</a></li>';
+                  $result = '<li><a class = "lienPays" href="../pays/'. rawurlencode(strtolower($nameEn)) . '">' . $nameFr . '</a></li>';
+              }
+              else {
+                  $result .= '<li><a class = "lienPays" href="../pays/'. rawurlencode(strtolower($nameEn)) . '">' . $nameFr . '</a></li>';
               }
             }
             else {
               if ($result === "") {
-                  $result = "<li><a class = 'lienPays' href='pays/" . urlencode(strtolower($country)) . "'>" . $country . "</a></li>";
-              } else {
-                  $result .= "<li><a class = 'lienPays' href='pays/" . urlencode(strtolower($country)) . "'>" . $country . "</a></li>";
+                  $result = "<li><a class = 'lienPays' href='pays/" . rawurlencode(strtolower($nameEn)) . "'>" . $nameFr . "</a></li>";
+              }
+              else {
+                  $result .= "<li><a class = 'lienPays' href='pays/" . rawurlencode(strtolower($nameEn)) . "'>" . $nameFr . "</a></li>";
               }
             }
           }
