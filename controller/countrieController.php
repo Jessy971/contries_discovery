@@ -13,7 +13,7 @@ $commentaires      = new ManagerCommentaires();
 
 //vérifie si le fichier cache exite et attibut le résulta à la variable $array.
 // si false, exécute une requète à l'api REST countries.
-if(!$array = json_decode($cache->getCache($file),true)){
+if(!$array = json_decode($cache->getCache($file))){
 
    $q        = 'https://restcountries.eu/rest/v2/name/'.$pays;
    $response = curl($q);
@@ -31,10 +31,7 @@ if(!$array = json_decode($cache->getCache($file),true)){
           $query->latlng[1]
         );
 }
-$country = unserialize($array['france']);
-
-//initilise la variable $p si le tableau est bien récupéré dans la variable $array avec l'étape précédente.
-//if(!empty($array)){$p = $array[$pays];}
+$country = unserialize($array->$pays);
 
 // initialise les coordonées GSP si existante.
 
@@ -51,9 +48,3 @@ $map  = "../views/assets/js/map.js";
 
 include('photoController.php');
 include('views/paysView.php');
-
-//debug
-// echo "<pre>";
-// var_dump($array['france']);
-// echo "</pre>";
-// var_dump ($country->getLng());
