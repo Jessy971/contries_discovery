@@ -1,7 +1,17 @@
 
       function initMap() {
 
-          var latlng = {lat : Number($('#lat').text()),lng : Number($('#lng').text())};// transforme les chaines de caractère en nombre pour les utiliser dans l'api map de google.
+        if ($('#lat').text() != "" && $('#lng').text() != ""){
+
+          var latt = Number($('#lat').text());
+          var long = Number($('#lng').text());
+        }
+        else {
+          latt = 10;
+          long = 10;
+        }
+
+          var latlng = {lat : latt ,lng : long};
 
           var option = {
             center : latlng, // récpère les coordonnées gps pour orienter la vue sur le pays consulté.

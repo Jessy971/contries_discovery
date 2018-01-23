@@ -1,5 +1,5 @@
 <?php
-require("class/class.Cache.php");
+require("class/Cache.class.php");
 
 $file   = dirname(__FILE__,2)."/cache/".htmlspecialchars($_SESSION['file']);
 $cache  = new Cache();

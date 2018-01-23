@@ -4,8 +4,8 @@ include_once('__header.php');
  ?>
 <section id="contenu" class="container noPadding">
   <div id="flagFrame" class="row grey">
-    <img id="flag" class="col-lg-12" src="<?php echo $flag;?>" alt="drapeau <?php echo $p['nom'];?>">
-    <h1 id="info" class="offset-lg-7"> <?php echo $p['nom'];?></h1>
+    <img id="flag" class="col-lg-12" src="<?php echo $flag;?>" alt="drapeau <?php echo $country->getNameFr();?>">
+    <h1 id="info" class="offset-lg-7"> <?php echo $country->getNameFr();?></h1>
   </div>
 
   <div class="row grey minHeight">
@@ -18,7 +18,7 @@ include_once('__header.php');
           <details open>
             <summary>Capitale :</summary>
             <ul>
-              <li><?php echo $p['capitale']; ?></li>
+              <li><?php echo $country->getCapital(); ?></li>
             </ul>
           </details>
         </li>
@@ -26,11 +26,11 @@ include_once('__header.php');
           <details>
             <summary>Langue(s) parlé(s) :</summary>
             <?php
-            if(count($p['langues']) > 1){
+            if(count($country->getLanguages()) > 1){
               echo "<ul>";
-              for($i = 0; $i < count($p['langues']); $i++) {
+              for($i = 0; $i < count($country->getLanguages()); $i++) {
             ?>
-              <li> <?php echo $p['langues'][$i]['name']; ?></li>
+              <li> <?php echo $country->getLanguages()[$i]->name; ?></li>
             <?php
               }
               echo "</ul>";
@@ -38,7 +38,7 @@ include_once('__header.php');
             else {
               ?>
               <ul>
-                <li><?php echo $p['langues'][0]['name'];?></li>
+                <li><?php echo $country->getLanguages()[0]->name;?></li>
               </ul>
 
             <?php
@@ -50,7 +50,7 @@ include_once('__header.php');
           <details open>
             <summary>Monnaie officielle :</summary>
             <ul>
-              <li><?php echo $p['monnaie']; ?></li>
+              <li><?php echo $country->getCurrencie(); ?></li>
             </ul>
           </details>
 
@@ -59,7 +59,7 @@ include_once('__header.php');
           <details open>
             <summary>Continent :</summary>
             <ul>
-              <li><?php echo $p['continent']; ?></li>
+              <li><?php echo $country->getContinent(); ?></li>
             </ul>
           </details>
         </li>
