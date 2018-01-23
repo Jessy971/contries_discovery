@@ -15,7 +15,7 @@
 
           var option = {
             center : latlng, // récpère les coordonnées gps pour orienter la vue sur le pays consulté.
-            zoom : 5
+            zoom : 3
           };
 
       //objet map.

@@ -2,8 +2,8 @@
  include('__head.php');
  include('__header.php');
  ?>
-<section id="contenu" class="container">
-  <div class="">
+<section id="contenu" class="container-fluid">
+  <div class="row">
     <div class="pays">
       <?php foreach ($countryCache as $element) {
               $country = unserialize($element);
