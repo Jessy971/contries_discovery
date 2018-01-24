@@ -171,4 +171,7 @@ footer{
   #commentaires h2{
     font-size: 3em;
   }
+  #map {
+    height: 900px;
+}
 }
