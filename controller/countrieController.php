@@ -7,7 +7,7 @@ require("class/Country.class.php");
 
 
 $cache             = new Cache();
-$pays              = htmlspecialchars($url[1]);
+$pays              = mb_strtolower(htmlspecialchars($url[1]));
 $file              = dirname(__FILE__,2).'/cache/'.$_SESSION['file'];
 $commentaires      = new ManagerCommentaires();
 

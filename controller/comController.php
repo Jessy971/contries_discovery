@@ -10,4 +10,4 @@ if(isset($_POST['pseudo'], $_POST['text'], $_SESSION['pays']))
   $commentaire = new ManagerCommentaires();
   $commentaire->createCom($pseudo, $contenu, $_SESSION['pays']);
 }
-header("Location: pays/".$_SESSION['pays']."/".$_SESSION['alpha']);
+header("Location: pays/".$_SESSION['pays']);
