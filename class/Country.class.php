@@ -8,11 +8,21 @@ class Pays{
   private $languages;
   private $flag;
   private $currencie;
-  private $latLng;
   private $lat;
   private $lng;
 
-  public function __construct($nameFr, $nameEn, $continent, $capital, $languages, $flag, $currencie, $lat = "N.C", $lng ="N.C"){
+  public function __construct(
+    $nameFr, 
+    $nameEn, 
+    $continent, 
+    $capital, 
+    $languages, 
+    $flag, 
+    $currencie, 
+    $lat = "N.C", 
+    $lng ="N.C"
+  ){
+
     $this->nameFr    = $nameFr;
     $this->nameEn    = $nameEn;
     $this->continent = $continent;
@@ -27,27 +37,32 @@ class Pays{
   //Getter
 
   //retourne le nom en français
-  public function getNameFr(){
+  public function getNameFr():string
+  {
     return $this->nameFr;
   }
 
   //retourne le nom en anglais
-  public function getNameEn(){
+  public function getNameEn():string
+  {
      return $this->nameEn;
-   }
+  }
 
   //retourne le continent du pays
-  public function getContinent(){
+  public function getContinent():string
+  {
     return $this->continent;
   }
 
   //retourne la capitale du pays
-  public function getCapital(){
+  public function getCapital():string
+  {
     return $this->capital;
   }
 
   //retourne la ou les langues
-  public function getLanguages(){
+  public function getLanguages(): array
+  {
     return $this->languages;
   }
 
@@ -62,12 +77,14 @@ class Pays{
   }
 
   //retourne la coordonnée lattitudinal
-  public function getLat(){
+  public function getLat()
+  {
     return $this->lat;
   }
 
   //retourne la coordonnée longitudinal
-  public function getLng(){
+  public function getLng()
+  {
     return $this->lng;
   }
 

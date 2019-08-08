@@ -39,9 +39,3 @@ $ajax = "views/assets/js/q.js";
 $map = "views/assets/js/map.js";
 $css = 'views/assets/css/stylesheet.css';
 include('views/welcomeView.php');
-
-
-// debug
-// echo "<pre>";
-// print_r(unserialize($countryCache['france'])->getNameFr()->getLat());
-// echo "</pre>";
